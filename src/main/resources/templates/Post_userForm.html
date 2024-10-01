@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post User Form</title>
+</head>
+<body>
+  <h2>User Form</h2>
+<!--  该 URL 映射到 UserController 中的 @PostMapping("/saveUser") 方法，处理表单提交的数据-->
+<!--  通过 model.addAttribute("user", new User())，控制器将一个 User 对象传递给视图，这个对象与表单绑定-->
+  <form th:action="@{/saveUser}" th:object="${user}" method="post">
+    <label for="name">Name:</label>
+<!--  th:field：Thymeleaf 语法，将表单中的字段与 User 对象的name属性绑定-->
+    <input type="text" id="name" th:field="*{name}" />
+    <br/>
+    <button type="submit">Save User</button>
+  </form>
+</body>
+</html>

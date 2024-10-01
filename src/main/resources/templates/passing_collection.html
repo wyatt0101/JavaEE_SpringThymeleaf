@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf passing collection</title>
+</head>
+
+<body>
+  <ul>
+    <li th:each="item:${items}" th:text="${item}"></li>
+  </ul>
+</body>
+</html>
