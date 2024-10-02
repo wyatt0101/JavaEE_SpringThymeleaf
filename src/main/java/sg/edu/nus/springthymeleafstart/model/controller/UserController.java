@@ -11,7 +11,7 @@ import sg.edu.nus.springthymeleafstart.model.domain.User;
 public class UserController {
     // 该方法处理 HTTP GET 请求，用于展示表单页面
     @GetMapping("/userForm")
-    // Spring MVC 提供的 Model 对象，用来在控制器和视图之间共享数据
+    // Spring MVC 提供的 Model 对象，用来在控制器和视图之间共享数据test test
     public String userForm(Model model){
         // 将一个新的 User 对象添加到模型中，并传递给视图
         model.addAttribute("user", new User());
